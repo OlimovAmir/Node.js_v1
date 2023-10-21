@@ -40,6 +40,19 @@ const saveNote = (content) => {
     } )
 }
 
+const listNote = () => {
+    getNote(notes => {
+        if (notes.length) {
+            console.log('Your list of notes')
+            notes.forEach(elem => {
+                console.log(elem.title)
+            });
+        } else {
+            console.log('The list is empty')
+        }
+    })
+}
+
 module.exports = {
-    addNote
+    addNote, listNote
 }

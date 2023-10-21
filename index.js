@@ -23,20 +23,9 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'Показать список заметок',
-    builder: {
-        title: {
-            type: 'string',
-            demandOption: true,
-            describe: 'Name title',
-        },
-        text: {
-            type: 'string',
-            demandOption: true,
-            describe: 'Content',
-        },
-    },
-    handler({title, text}){
-       
+    
+    handler(){
+       notes.listNote()
     }
 })
 yargs.parse();

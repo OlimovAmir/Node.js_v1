@@ -1,1 +1,9 @@
-[1,2,3,{"sum":250},{"title":"testTitle","text":"testText"}]
+[
+  { "title": [1, { "title": 2 }, { "title": 3 }] },
+  { "title": 250 },
+  { "title": "testTitle", "text": "testText" },
+  {
+    "title": "Купить новый альбом группы Сплин",
+    "text": "Хорошои диски продаят в центре города"
+  }
+]
