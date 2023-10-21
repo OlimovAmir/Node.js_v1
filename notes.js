@@ -12,6 +12,7 @@ const addNote = (title, text) => {
             console.log('Заметка существует')
         } else {
             note.push({title, text})
+            saveNote(note);
             console.log('Заметка добавлена')
         }
     })
@@ -29,6 +30,14 @@ const getNote = (callback) => {
         }
         //console.log(content)
     })
+}
+
+const saveNote = (content) => {
+    fs.writeFile(notePath, JSON.stringify(content), err => {
+        if (err) {
+            throw new Error(err)
+        }
+    } )
 }
 
 module.exports = {
